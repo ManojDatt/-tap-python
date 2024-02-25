@@ -1,3 +1,4 @@
+
 # Tap Python Library
 
 The Tap Python library provides convenient access to the Tap API from
@@ -8,17 +9,25 @@ API.
 
 inspired from https://github.com/stripe/stripe-python
 
+---
+```go
+pip install git+https://github.com/ManojDatt/-tap-python.git
+pip install future
+```
+---
+
 ## Usage
 
 The library needs to be configured with your account's secret key which is
 available in your Tap Dashboard. Set `tap.api_key` to its
 value:
 
-``` python
+---
+```
 >>> import tap
 >>>
 >>> # tap.api_key = os.environ.get('TAP_SECRET_KEY')
->>> tap.api_key = 'sk_test_YOUR_KEY'
+>>> tap.api_key = 'sk_test_YOUR_KEY' # Optional for testing
 >>>
 >>> resp = tap.Customer.create(
 ...     first_name='first name',
@@ -43,9 +52,6 @@ Success: <Customer customer id=cus_k9RY2018525q5LP1962511 at 0x7f2a495e5990> JSO
   "tap_version": null
 }
 ```
+---
 
 
-Battle tested in
-
-<img src="https://www.barmej.com/press/logo.png" alt="barmej" width="200"/>
- 
